@@ -52,12 +52,12 @@ RSpec.describe "Articles", type: :request do
   # Test suite for POST /todos
   describe 'POST /articles' do
     # valid payload
-    let(:valid_attributes) { { title: 'Learn Elm', created_by: '1' } }
+    let(:valid_attributes) { { title: 'Learn Elm', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum tincidunt pharetra.', author: 'Jainy Lie', user_id: 1} }
 
     context 'when the request is valid' do
       before { post '/articles', params: valid_attributes }
 
-      it 'creates a todo' do
+      it 'creates article' do
         expect(json['title']).to eq('Learn Elm')
       end
 
@@ -75,7 +75,7 @@ RSpec.describe "Articles", type: :request do
 
       it 'returns a validation failure message' do
         expect(response.body)
-          .to match(/Validation failed: Created by can't be blank/)
+          .to match(/Body can't be blank, Author can't be blank, User can't be blank/)
       end
     end
   end
