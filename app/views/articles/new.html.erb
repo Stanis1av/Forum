@@ -4,16 +4,16 @@
 
 	<%= form_for :article, url: articles_path do |f| %>
 	<p>
-		<%= f.label :title %><br/>
+		<%= f.label :title, "Наименовие статьи" %><br/>
 		<%= f.text_field :title, class: "form-control col-5" %>
 	</p>
 	<p>
-		<%= f.label :content %><br/>
+		<%= f.label :content, "Содержимое статьи" %><br/>
 		<%= f.text_area :content, class: "form-control col-7", rows: 5 %>
 	</p>
 
 	<p>
-		<%= f.submit class: "btn btn-primary" %>
+		<%= f.submit "Создать статью", class: "btn btn-primary" %>
 	</p>
 		<% end %>
 

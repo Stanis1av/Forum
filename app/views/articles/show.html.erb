@@ -1,7 +1,18 @@
-<h1><%= @article.title %></h1>
+<div class="row">
+	<div class="col-lg-2 col-md-1 ml-auto mr-auto">
+	</div>
 
-<p>
-	<%= @article.content %>
-</p>
+  	<div class="col-lg-6 col-md-6 ml-auto mr-auto">
+		<h1><%= @article.title %></h1>
 
-<hr/>
+		<p>
+			<%= @article.content %>
+		</p>
+
+		<hr/>
+		<%= render 'articles/comments' %>
+	</div>
+	
+	<div class="col-lg-4 col-md-4 ml-auto mr-auto">
+	</div>
+</div>
