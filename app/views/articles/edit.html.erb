@@ -12,7 +12,11 @@
 		<%= f.label :content, "Содержимое статьи" %><br/>
 		<%= f.text_area :content, class: "form-control col-7", rows: 5 %>
 	</p>
-
+	<hr/>
+	<p>
+	  <%= f.label :tag_list, "Введите теги" %><br />
+	  <%= f.text_field :tag_list, class: "form-control", :value => article_tag_list %>
+	</p>
 	<p>
 		<%= f.submit "Редактировать", class: "btn btn-primary" %>
 	</p>

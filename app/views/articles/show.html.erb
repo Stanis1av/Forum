@@ -8,11 +8,17 @@
 		<p>
 			<%= @article.content %>
 		</p>
-
+		<hr/>
+		<p>
+		  Tags:
+		  <% @article.tags.each do |tag| %>
+		    <%= link_to tag.name, tag_path(tag) %>
+		  <% end %>
+		</p>
 		<hr/>
 		<%= render 'articles/comments' %>
 	</div>
-	
+
 	<div class="col-lg-4 col-md-4 ml-auto mr-auto">
 	</div>
 </div>
