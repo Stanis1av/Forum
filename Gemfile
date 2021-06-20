@@ -51,4 +51,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # gem 'tzinfo-data', '>= 1.2016.7'
 
 gem 'devise'
-# gem 'faker'
+gem 'faker'
